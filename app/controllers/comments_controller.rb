@@ -66,6 +66,6 @@ class CommentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def comment_params
-    params.require(:comment).permit(:name, :message, :post_id)
+    params.require(:comment).permit(:name, :message, :post_id, :parent_id).merge!(user: current_user)
   end
 end
