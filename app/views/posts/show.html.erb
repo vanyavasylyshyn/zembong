@@ -10,6 +10,11 @@
   <%= @post.body %>
 </p>
 
+<p>
+  <strong>Created by:</strong>
+  <%= @post.user.email %>
+</p>
+
 <section class="section comments">
   <div class="container">
     <h2 class="subtitle is-5">

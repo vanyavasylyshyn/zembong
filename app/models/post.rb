@@ -7,4 +7,6 @@ class Post
   field :body, type: String
 
   has_many :comments, dependent: :destroy
+
+  belongs_to :user
 end

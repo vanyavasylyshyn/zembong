@@ -1,9 +1,23 @@
 <p>
   <strong><%= comment.name %>:</strong>
   <%= comment.message %>
+  <strong><%= comment.user.email %>:</strong>
   <br>
   <%= link_to 'Delete', [comment],
               method: :delete,
               class: "button is-danger",
               data: { confirm: 'Are you sure?' } %>
 </p>
+<section class="section comments" style="background-color: #999999; margin-left: 50px;">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong><%= comment.children.count %></strong> Replies
+    </h2>
+    <%= render comment.children %>
+    <div class="comment-form">
+      <hr />
+      <h3 class="subtitle is-3">Leave a reply</h3>
+      <%= render partial: 'comments/form', locals: { comment: comment.children.build } %>
+    </div>
+  </div>
+</section>
