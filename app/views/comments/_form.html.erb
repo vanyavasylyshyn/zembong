@@ -23,6 +23,11 @@
 
   <div class="field">
     <%= form.hidden_field :post_id %>
+<!--    value: comment&.parent&.post_id-->
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :parent_id, value: comment&.parent&._id %>
   </div>
 
   <div class="actions">
