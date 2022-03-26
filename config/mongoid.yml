@@ -1,7 +1,7 @@
 development:
   clients:
     default:
-      uri: mongodb+srv://foggers:tw4dGKicEIkgbbKN@zembong.6emu1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+      uri: url
 #      database: zembong_development
 #      hosts:
 #        - localhost:27017
